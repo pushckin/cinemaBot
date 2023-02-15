@@ -83,7 +83,7 @@ def check_film_updet():
 
 def main():
     hd_rezka()
-    # print(check_film_updet())
+    print(check_film_updet())
 
 if __name__ == '__main__':
     main()
