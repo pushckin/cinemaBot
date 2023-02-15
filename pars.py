@@ -5,7 +5,7 @@ import json
 
 def hd_rezka():
     # url = 'http://hdrezkanm2js1.net/new/?filter=watching'
-    url = 'https://hdrezkadjkkrj.net/new//'
+    url = 'https://hdrezkanbnssf.net/new/'
     HEADERS = {
         'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
         'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
@@ -39,7 +39,7 @@ def check_film_updet():
     with open("new_dict.json", encoding="utf-8") as file:
         new_dict = json.load(file)
 
-    url = 'https://hdrezkadjkkrj.net/new/'
+    url = 'https://hdrezkanbnssf.net/new/'
     # url = 'http://hdrezkanm2js1.net/new/?filter=watching'
     HEADERS = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
