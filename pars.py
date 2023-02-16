@@ -20,8 +20,8 @@ def hd_rezka():
     for item in items:
         url_id = item.find('div', class_='b-content__inline_item-link').find('a').get('href')
         title = item.find('div', class_='b-content__inline_item-link').get_text()
-        link = item.find('div', class_='b-content__inline_item-link').find('a').get('href')
-        movie_img = item.find('div', class_='b-content__inline_item-cover').find('img').get('src')
+        link = item.find('div', class_='b-content__inline_item-cover').find('a').get('href')
+        movie_img = item.find('div', class_='b-content__inline_item-cover').find('img').get('data-src')
 
         item_id = url_id.split('/')[-1]
         item_id = item_id[:-5]
@@ -32,7 +32,7 @@ def hd_rezka():
             'movie_img': movie_img
         }
 
-    with open('new_dict.json2', 'w', encoding='utf-8') as file:
+    with open('new_dict.json', 'w', encoding='utf-8') as file:
         json.dump(new_dict, file, indent=3, ensure_ascii=False)
 
 def check_film_updet():
@@ -61,8 +61,8 @@ def check_film_updet():
             continue
         else:
             title = item.find('div', class_='b-content__inline_item-link').get_text()
-            link = item.find('div', class_='b-content__inline_item-link').find('a').get('href')
-            movie_img = item.find('div', class_='b-content__inline_item-cover').find('img').get('src')
+            link = item.find('div', class_='b-content__inline_item-cover').find('a').get('href')
+            movie_img = item.find('div', class_='b-content__inline_item-cover').find('img').get('data-src')
 
             new_dict[item_id] = {
                 'title': title,
