@@ -25,7 +25,7 @@ async def get_all_films(message: types.Message):
         new_dict = json.load(file)
 
     for k, v in sorted(new_dict.items()):
-        news = f"{hlink(v['title'], v['link'])}\n"
+        news = f"{hlink(v['title'], v['link']), v['movie_img']}\n"
                # f"{hunderline(v['title'])}\n"
 
         await bot.send_message(chat_id, news)
@@ -38,7 +38,7 @@ async def get_last_films(message: types.Message):
         new_dict = json.load(file)
 
     for k, v in sorted(new_dict.items())[-5:]:
-        news = f"{hlink(v['title'], v['link'])}\n"
+        news = f"{hlink(v['title'], v['link']), v['movie_img']}\n"
 
         await message.answer(news)
         await bot.send_message(chat_id, news)
@@ -49,7 +49,7 @@ async def get_fresh_films(message: types.Message):
 
     if len(fresh_films) >= 1:
         for k, v in sorted(fresh_films.items()):
-            news = f"{hlink(v['title'], v['link'])}\n"
+            news = f"{hlink(v['title'], v['link']), v['movie_img']}\n"
 
             await message.answer(news)
             await bot.send_message(chat_id, news)
@@ -63,7 +63,7 @@ async def news_films_min():
 
         if len(fresh_film) >= 1:
             for k, v in sorted(fresh_film.items()):
-                news = f"{hlink(v['title'], v['link'])}\n"
+                news = f"{hlink(v['title'], v['link']), v['movie_img']}\n"
 
                 await bot.send_message(chat_id, news)
                 await bot.send_message(user_id, news)
